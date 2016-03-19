@@ -1,0 +1,23 @@
+<div id="container">
+  <h1><?php echo $user_name?>'s Profile</h1>
+
+  <div id="body">
+        
+    <div>
+        <img src="<?php echo $user_img?>"/>
+    </div>
+    <div>
+          <?php echo $description; ?>
+    </div>
+    <div>
+        <h4>Skills</h4>
+        <?php 
+           echo $skills;
+        ?>
+        </ul>
+    </div>
+
+  </div>
+
+  <p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
+</div>

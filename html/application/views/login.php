@@ -1,0 +1,70 @@
+<style>
+ .login{
+    margin-top: 60px;
+  }
+  .login h2{
+    padding-bottom: 7px;
+   }
+  .login, .login input, .login textarea{
+    text-align:center;
+    width: 100%;
+  }
+  .error{
+    color:red;
+  }
+  .success{
+    color:green;
+  }
+</style>
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" href="/">SkillSwap</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/index.php/login">Login</a>
+                    </li>
+                    <li>
+                        <a href="/index.php/register">Register</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+<div class="login">
+  <div class="col-md-5"></div>
+  <div class="col-md-2">
+        <h2> Sign in </h2>
+<?php 
+      if(isset($error_message)){
+         echo "<p class='error'>$error_message<p>";
+      }
+      if(isset($success_message)){
+         echo "<p class='success'>$success_message</p>";
+      }
+?>
+        <form action="/index.php/login/loginForm" method="post">
+           <input name="username" placeholder="Username">
+           <input name="password" placeholder="Password" type="password">
+           <button class="btn-block btn-primary" type="submit">Login</button>
+        </form>
+  </div>
+  <div class="col-md-5"></div>
+</div>

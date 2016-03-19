@@ -1,0 +1,74 @@
+<style>
+.navbar-form{
+ display:inline;
+}
+.input-group{
+ margin-top:8px;
+} 
+
+</style>
+<nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">SkillSwap</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/index.php/dashboard">Dashboard</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/index.php/editProfile">Edit</a></li>
+                <li><a href="/index.php/yourProfile">View</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Skills<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/index.php/addSkills">Your Skills</a></li>
+                <li><a href="/index.php/addDesiredSkills">Skills You Desire</a></li>
+              </ul>
+
+            </li>
+             <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Messages<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/index.php/composeMessage">Compose</a></li>
+                <li><a href="/index.php/inbox">Inbox</a></li>
+                <li><a href="/index.php/outbox">Sent</a></li>
+
+              </ul>
+
+            </li>
+            <li><a href="/index.php/logout">Logout<span class="sr-only">(current)</span></a></li>
+
+          </ul>
+          <div class="nav navbar-nav navbar-right">
+        <form class="search_by_skill navbar-form" method="post" action="/index.php/search/searchSkill">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search by skill" name="skill_name" id="srch-term">
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+        </div>
+        </form>
+        <form class="search_by_desired_skill navbar-form" method="post" action="/index.php/search/searchDesiredSkill">
+        <div class="input-group"> 
+            <input type="text" class="form-control" placeholder="Search by skill desired" name="skill_name" id="srch-term">
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+        </div>
+        </form>
+
+
+          </div>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
